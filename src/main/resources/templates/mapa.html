@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <title>Mapa</title>
+    <!-- METAS -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!-- FAVICON -->
+    <link rel="icon" href="" />
+    <!-- END FAVICON -->
+</head>
+
+<body>
+
+    <!-- nav -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Map Route</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input id="localizacao" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button id="btn-search" class="btn btn-outline-success my-2 my-sm-0" type="button">Search</button>
+        </form>
+      </div>
+    </nav>
+    <!-- nav end -->
+
+    <!-- main -->
+    <main class="">
+
+        <!-- container -->
+        <section class="container">
+
+            <!-- row -->
+            <div class="row justify-content-start">
+                <!-- div map -->
+                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                    <div class="card">
+                        <div id="map" class="card-body map">
+
+                        </div>
+                    </div>
+                </div>
+                <!-- end div map -->
+                <section class="col-lg-4">
+                   <div id="card-lateral" class="row">
+                       
+
+                    
+                   </div>
+                                      
+                </section>
+                
+
+            </div>
+            <!-- end row -->
+
+        </section>
+        <!-- end container -->
+
+    </main>
+    <!-- end main -->
+
+   
+    <!-- jQuery-Popper-Bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+    <!-- JavaScript -->
+    <script src="js/map/model/DirectionsService.js"></script>
+    <script src="js/map/model/Marker.js"></script>
+    <script src="js/map/model/Geocoder.js"></script>
+    <script src="js/map/model/Route.js"></script>
+    <script src="js/map/controller/MapController.js"></script>
+    <script async="async" defer="defer"	th:src="@{https://maps.googleapis.com/maps/api/js(key=AIzaSyBUvCc_jRRHW2twJiPL75vNB0MDix1SmKs, callback=init)}"></script>
+    <!--  <script async="async" defer="defer" Src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUvCc_jRRHW2twJiPL75vNB0MDix1SmKs&callback=init"></script> -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
